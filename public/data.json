@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "cover": "../src/assets/Rectangle 2-1.png",
+        "title": "Introduction to Programming",
+        "short_description": "Learn the fundamentals of Python programming language and start building .",
+        "price": 49.99,
+        "credit_hours": 20
+    },
+    {
+        "id": 2,
+        "cover": "../src/assets/Rectangle 2-2.png",
+        "title": "JavaScript for Beginners",
+        "short_description": "Master the basics of JavaScript and create interactive web pages and web applications.",
+        "price": 59.99,
+        "credit_hours": 25
+    },
+    {
+        "id": 3,
+        "cover": "../src/assets/Rectangle 2-3.png",
+        "title": "Java Programming Masterclass",
+        "short_description": "Comprehensive Java course covering from basics to advanced concepts, ideal for aspiring developers.",
+        "price": 79.99,
+        "credit_hours": 30
+    },
+    {
+        "id": 4,
+        "cover": "../src/assets/Rectangle 2-4.png",
+        "title": "C++ Programming: From Beginner to Advanced",
+        "short_description": "Dive into C++ programming language with this course designed for beginners to advanced learners.",
+        "price": 69.99,
+        "credit_hours": 35
+    },
+    {
+        "id": 5,
+        "cover": "../src/assets/Rectangle 2-5.png",
+        "title": "HTML and CSS Essentials",
+        "short_description": "Learn the building blocks of web development with HTML and CSS, perfect for beginners. this is very nice course",
+        "price": 39.99,
+        "credit_hours": 15
+    },
+    {
+        "id": 6,
+        "cover": "../src/assets/Rectangle 2-6.png",
+        "title": "Data Structures and Algorithms in Python",
+        "short_description": "Explore fundamental data structures and algorithms concepts using Python programming language.",
+        "price": 89.99,
+        "credit_hours": 40
+    },
+    {
+        "id": 7,
+        "cover": "../src/assets/Rectangle 2.png",
+        "title": "Android App Development with Kotlin",
+        "short_description": "Build Android applications using Kotlin programming language with this hands-on course.",
+        "price": 99.99,
+        "credit_hours": 45
+    },
+    {
+        "id": 8,
+        "cover": "../src/assets/Rectangle 3-1.png",
+        "title": "Full Stack Web Development Bootcamp",
+        "short_description": "Become a full stack web developer by mastering both front-end and back-end technologies.",
+        "price": 129.99,
+        "credit_hours": 60
+    },
+    {
+        "id": 9,
+        "cover": "../src/assets/Rectangle 3.png",
+        "title": "Machine Learning Fundamentals",
+        "short_description": "Discover the core concepts of machine learning and start building intelligent applications.",
+        "price": 109.99,
+        "credit_hours": 50
+    }
+
+]
