@@ -5,14 +5,24 @@ import Header from "./Components/Header/Header";
 
 const App = () => {
   const [courseNames, setCourseNames] = useState([]);
-  const [credit, setCredit]=useState(20)
-  const [total, setTotal]=useState(0)
+  const [credit, setCredit]=useState(20);
+  const [total, setTotal]=useState(0);
+  const [totalResult, setTotalResult]= useState(0);
+  
+   
+  const totalPrice = (course)=>{
+   const price = course.price;
+   const newPrice =totalResult + price
+   setTotalResult(newPrice)
+
+  }
 
   const handleTotal =(course)=>{
     const newValue = total + course.credit_hours
     setTotal(newValue)
     handleCredit(newValue)
   }
+
   const handleCredit = (newValue)=>{
     const newResult = credit - newValue;
    setCredit(newResult)
@@ -23,6 +33,7 @@ const App = () => {
     setCourseNames(newValue);
     handleTotal(course);
     handleCredit(course.credit_hours);
+    totalPrice(course);
 }
 
  return (
@@ -38,6 +49,7 @@ const App = () => {
       handleCredit={handleCredit}
       credit={credit}
       total={total}
+      totalResult={totalResult}
       ></Cart>
      </main>
     </div>
