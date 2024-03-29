@@ -3,7 +3,7 @@ import Name from '../Name/Name';
 const CourseName = ({courseNames}) => {
     return (
         <div >
-           <h1 className="ml-4 font-bold text-xl">course name</h1> 
+           <h1 className="ml-4 mt-2 font-bold text-xl">course name</h1> 
            {
             courseNames.map(name => <Name
             key={name.id}

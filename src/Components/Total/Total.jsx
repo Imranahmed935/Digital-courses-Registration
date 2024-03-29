@@ -1,7 +1,7 @@
-const Total = () => {
+const Total = ({total}) => {
     return (
         <div>
-            <h1>Total credit Hour</h1>
+            <h1 className="text-xl ml-4 mt-2 font-bold">Total credit Hour {total}</h1>
         </div>
     );
 };
