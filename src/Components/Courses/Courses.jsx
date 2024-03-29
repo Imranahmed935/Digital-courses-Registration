@@ -15,8 +15,8 @@ const Courses = ({handleCourseName}) => {
     return (
         <div className="w-3/4 grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4"> 
             {
-                courses.map(course=><Course 
-                key={course.id} 
+                courses.map((course,idx)=><Course 
+                key={idx} 
                 handleCourseName={handleCourseName}
                 course={course}
                 ></Course> )
