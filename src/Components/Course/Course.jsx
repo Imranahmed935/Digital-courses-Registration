@@ -16,6 +16,7 @@ const Course = ({course,handleCourseName}) => {
             </div>
             <button 
             onClick={()=>handleCourseName(course)}
+            
             className='btn bg-green-500 w-full p-2 rounded text-xl font-bold'
             >select</button>
         </div>
