@@ -6,39 +6,68 @@
 
   const App = () => {
   const [courseNames, setCourseNames] = useState([]);
+  console.log(courseNames)
   const [credit, setCredit]=useState(20);
   const [total, setTotal]=useState(0);
   const [totalResult, setTotalResult]= useState(0);
-
-  const totalPrice = (course) => {
-    const price = course.price;
-    const newPrice = totalResult + price;
+  
+  const totalPrice = (price) => {
+    const price1 = price;
+    const newPrice = totalResult + price1;
     setTotalResult(newPrice);
 }
-
   const handleTotal = (course) => {
-    const newValue = total + course.credit_hours;
+    const newValue = total + course;
     setTotal(newValue);
-    handleCredit(newValue);
+    if(total <= 20){
+      return;
+    }else{
+      handleCredit(newValue); 
+    }
+    
   }
 
-  const handleCredit = (newValue) => {
-    const newResult = credit - newValue;
+  const handleCredit = (course) => {
+    const newResult = credit - course.credit_hours;
+    if( newResult < 0){
+      toast.error("You don't have enough credits");
+      return
+    }
+    if (credit <= 0){
+      return
+    }
     setCredit(newResult)
+    handleTotal(course.credit_hours);
+    totalPrice(course.price);
+
   }
 
-  const handleCourseName = (course)=>{
-  const alReadyExist = courseNames.some(item=>item.id === course.id);
-  if(alReadyExist){
-  toast.error('the course already  added');
-  return ;
-  }
-  const newValue1 = [...courseNames, course]
-  setCourseNames(newValue1);
-  handleTotal(course);
-  handleCredit(course.credit_hours);
-  totalPrice(course);
-  }
+  const handleCourseName = (course) => {
+    if (credit <= 0) {
+      toast.error("You don't have enough credits");
+      return;
+    }
+  
+    const newValue1 = [...courseNames, course];
+  
+    const newResult = credit - course.credit_hours;
+    if (newResult < 0) {
+      toast.error("You don't have enough credits");
+      return;
+    }
+
+    const alReadyExist = courseNames.some((item) => item.id === course.id);
+    if (alReadyExist) {
+      toast.error("The course is already added");
+      return;
+    }
+
+    setCourseNames(newValue1);git
+    setCredit(newResult);
+    setTotal(total + course.credit_hours);
+    setTotalResult(totalResult + course.price);
+  };
+  
 
   return (
   <div>

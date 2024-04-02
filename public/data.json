@@ -45,7 +45,7 @@
         "title": "Data Structures and Algorithms in Python",
         "short_description": "Explore fundamental data structures and algorithms concepts using Python programming language.",
         "price": 89.99,
-        "credit_hours": 9
+        "credit_hours": 2
     },
     {
         "id": 7,
@@ -61,7 +61,7 @@
         "title": "Full Stack Web Development Bootcamp",
         "short_description": "Become a full stack web developer by mastering both front-end and back-end technologies.",
         "price": 129.99,
-        "credit_hours": 6
+        "credit_hours": 3
     },
     {
         "id": 9,

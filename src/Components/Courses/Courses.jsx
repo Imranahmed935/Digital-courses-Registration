@@ -5,7 +5,7 @@ import Course from "../Course/Course";
 
 const Courses = ({handleCourseName}) => {
     const [courses, setCourses] = useState([]);
-    console.log(courses)
+    
 
     useEffect(()=>{
         fetch('../../../public/data.json')
@@ -19,13 +19,14 @@ const Courses = ({handleCourseName}) => {
                 key={idx} 
                 handleCourseName={handleCourseName}
                 course={course}
+        
                 ></Course> )
             }
         </div>
     );
 };
 Courses.propTypes= {
-    handleCourseName: PropsTypes.func
+    handleCourseName: PropsTypes.func,
 }
 
 export default Courses;
