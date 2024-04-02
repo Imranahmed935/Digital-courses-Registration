@@ -62,7 +62,7 @@
       return;
     }
 
-    setCourseNames(newValue1);git
+    setCourseNames(newValue1);
     setCredit(newResult);
     setTotal(total + course.credit_hours);
     setTotalResult(totalResult + course.price);
